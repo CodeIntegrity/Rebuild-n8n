@@ -110,7 +110,7 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         
-        git add languages/* scripts/temp/en.json || true
+        git add locales/* scripts/temp/en.json || true
         
         # 如果没有变更就跳过
         if git diff --cached --quiet; then
@@ -127,8 +127,6 @@ jobs:
         TAG="${{ steps.latest_release.outputs.latest }}"
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add editor-ui-dist
-        git add docker-compose.yml
         git commit -m "chore: add translate for ${{ steps.latest_release.outputs.latest }}"
         git tag $TAG
         git push origin $TAG

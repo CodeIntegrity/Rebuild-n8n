@@ -9,6 +9,7 @@ MAX_RETRIES = 3
 
 def get_latest_version():
     url = "https://api.github.com/repos/n8n-io/n8n/releases"
+    response = None
     for attempt in range(MAX_RETRIES):
         try:
             response = requests.get(url)

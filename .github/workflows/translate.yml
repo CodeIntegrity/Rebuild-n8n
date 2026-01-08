@@ -128,7 +128,7 @@ jobs:
     - name: 创建 git tag
       if: steps.check_tag.outputs.exists == 'false'
       run: |
-        TAG="${{ steps.latest-version.outputs.LATEST_TAG }}"
+        TAG="${{ steps.latest_release.outputs.REF_TAG }}"
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         
@@ -147,7 +147,7 @@ jobs:
       id: create_release
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{ steps.latest-version.outputs.LATEST_TAG }}
+        tag_name: ${{ steps.latest_release.outputs.REF_TAG }}
         name: Release translation to ${{ steps.latest-version.outputs.LATEST_TAG }}
         body: |
           自动发布的中文语言包版本。

@@ -952,6 +952,7 @@
     "dataMapping.schemaView.execution.resumeUrl": "恢复“等待”节点的 URL",
     "dataMapping.schemaView.variablesUpgrade": "使用 Pro 或 Enterprise 计划设置全局变量并在工作流中使用它们。<a href=\"https://docs.n8n.io/code/variables/\" target=\"_blank\">详情</a>",
     "dataMapping.schemaView.variablesEmpty": "在此处<a href=\"/variables\" target=\"_blank\">创建可在工作流间通用的变量</a>",
+    "dataMapping.schemaView.mergeNotice": "此模式显示了多个项目中的字段。某些字段在单个项目中可能缺失。",
     "displayWithChange.cancelEdit": "取消编辑",
     "displayWithChange.clickToChange": "点击更改",
     "displayWithChange.setValue": "设置值",
